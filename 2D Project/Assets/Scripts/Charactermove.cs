@@ -32,7 +32,7 @@ public class Charactermove : MonoBehaviour
     {
 
         // This code makes the charcter jump
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
@@ -44,7 +44,7 @@ public class Charactermove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
     }
