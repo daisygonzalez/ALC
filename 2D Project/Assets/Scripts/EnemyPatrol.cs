@@ -7,17 +7,19 @@ public class EnemyPatrol : MonoBehaviour {
     // Movemenet Variables
     public float Movespeed;
     public bool MoveRight;
-      // Wall CHeck
+     
+    // Wall CHeck
      public Transform WallCheck;
     public float WallCheckRadius;
      public LayerMask WhatIsWall;
     private bool HittingWall;
+    
     // Edge Check
      private bool NotAtEdge;
      public Transform EdgeCheck;
 
    	
-	}
+	
 
 // Update is called once per frame
 void Update (){
@@ -31,14 +33,14 @@ void Update (){
     }
     if (MoveRight)
     {
-        Transform.localScale = new Vector3(-1f, 1f, 1f);
+        transform.localScale = new Vector3(-0.2f, 0.2f, 1f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(Movespeed, GetComponent<Rigidbody2D>().velocity.y);
 
 
     }
     else
     {
-        Transform.localScale = new Vector3(1f,1f,1f);
+        transform.localScale = new Vector3(0.2f,0.2f,1f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(-Movespeed, GetComponent<Rigidbody2D>().velocity.y);
     }//ends else
 

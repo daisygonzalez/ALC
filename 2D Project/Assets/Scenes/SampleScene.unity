@@ -1568,7 +1568,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1989,7 +1989,7 @@ GameObject:
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2036,6 +2036,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d70154f45c1453796845d4b4bbd82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Movespeed: 3.5
+  MoveRight: 0
+  WallCheck: {fileID: 703951900}
+  WallCheckRadius: 0.1
+  WhatIsWall:
+    serializedVersion: 2
+    m_Bits: 768
+  EdgeCheck: {fileID: 1534408450}
 --- !u!50 &1810757857
 Rigidbody2D:
   serializedVersion: 4
@@ -2065,16 +2073,16 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -2116,15 +2124,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.071110725, b: 0.07887878, a: 1}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.8396226, g: 0.16237983, b: 0.1688918, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &1810757860
 Transform:
@@ -2525,7 +2533,7 @@ GameObject:
   - component: {fileID: 1980827837}
   - component: {fileID: 1980827836}
   - component: {fileID: 1980827835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: 5589e726ea6c9433eabd2b8818ac8141, type: 3}
