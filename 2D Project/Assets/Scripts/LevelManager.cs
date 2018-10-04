@@ -27,6 +27,7 @@ public GameObject CurrentCheckPoint;
 		PC = FindObjectOfType<Rigidbody2D> ();
 	}
 	
+	
 	public void RespawnPlayer(){
         StartCoroutine ("RespawnPlayerCo");
     }
@@ -37,9 +38,9 @@ public GameObject CurrentCheckPoint;
 //            PC.enable= false;
         PC.GetComponent<Renders> ().enabled = false;
         // Gravity Reset 
-        gravityStore = PC.GetCOmponent<Rigidbody2D>().gravityScale;
+        gravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
         PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
-        PC.GetComponent<Rigidbody>().velocity = Vector2.zero;
+        PC.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         // Point Penalty
         ScoreManager.AddPoints(-pointPenaltyOnDeath);
         //Debug Message
@@ -47,14 +48,13 @@ public GameObject CurrentCheckPoint;
         //Respawn Delay
         yield return new WaitForSeconds (respawnDelay);
         //Gravity Restore
-        PC.GetComponent<Rigidbody>()gravityScale = gravityStore;
+        PC.GetComponent<Rigidbody2D>()gravityScale = gravityStore;
         //Match Player transform position
         PC.transform.position = currentCheckPoint.transform.position;
-   //Show PC
-    PC.enabled = true;
-    PC.GetComponent<Renders> ().enable = true;
+   
     //Spawn PC
-    Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);}
+    Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
+    }
 		
 	}
 
