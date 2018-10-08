@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
 public GameObject CurrentCheckPoint;
-    private Rigidbody2D PC;
+    public Rigidbody2D PC;
   
     // Particles
-    public GameObject DeathParticles;
-    public GameObject respawnParticle;
+    public GameObject DeathParticle;
+    public GameObject RespawnParticle;
    
     //Respawn Delay
 	public float respawnDelay;
@@ -24,7 +24,7 @@ public GameObject CurrentCheckPoint;
     
     
 	void Start () {
-		PC = FindObjectOfType<Rigidbody2D> ();
+		//PC = FindObjectOfType<Rigidbody2D> ();
 	}
 	
 	
@@ -33,10 +33,10 @@ public GameObject CurrentCheckPoint;
     }
 	public IEnumerator RespawnPlayerCo(){
         //Generate Death Particle
-        Instantiate (DeathParticle, PC,transform.position, PC.transform.rotation);
+        Instantiate (DeathParticle, PC.transform.position, PC.transform.rotation);
             //Hide PC
 //            PC.enable= false;
-        PC.GetComponent<Renders> ().enabled = false;
+        PC.GetComponent<Renderer> ().enabled = false;
         // Gravity Reset 
         gravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
         PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
@@ -44,14 +44,16 @@ public GameObject CurrentCheckPoint;
         // Point Penalty
         ScoreManager.AddPoints(-pointPenaltyOnDeath);
         //Debug Message
-        Debug.Log ("Player Respawn");
+        Debug.Log ("PC Respawn");
         //Respawn Delay
         yield return new WaitForSeconds (respawnDelay);
         //Gravity Restore
-        PC.GetComponent<Rigidbody2D>()gravityScale = gravityStore;
-        //Match Player transform position
-        PC.transform.position = currentCheckPoint.transform.position;
-   
+        PC.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+        //Match PCs transform position
+        PC.transform.position = CurrentCheckPoint.transform.position;
+   //Show Pc
+        //Pc.enabled = true;
+        PC.GetComponent<Renderer> ().enabled = true;
     //Spawn PC
     Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
     }

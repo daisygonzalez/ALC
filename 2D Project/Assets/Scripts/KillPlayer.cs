@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour {
 
-    public LevelManager levelManager;
+    public LevelManager LevelManager;
 	// Use this for initialization
 	void Start () {
 		LevelManager = FindObjectOfType <LevelManager>();
