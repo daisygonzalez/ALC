@@ -61,6 +61,15 @@ public class Charactermove : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+         
+         //Player flip
+         if (GetComponent<Rigidbody2D>().velocity.x > 0)
+         transform.localScale = new Vector3(5f,5f,1f);
+
+        }
+        
+        else if (GetComponent<Rigidbody2D>().velocity.x < 0){
+        transform.localScale = new Vector3(-5f,5f,1f);
         }
 
     }
@@ -70,6 +79,7 @@ public class Charactermove : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, Jumpheight);
     }
 }
+
 
 
 

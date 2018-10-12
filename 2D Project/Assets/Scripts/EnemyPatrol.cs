@@ -33,14 +33,14 @@ void Update (){
     }
     if (MoveRight)
     {
-        transform.localScale = new Vector3(-0.2f, 0.2f, 1f);
+        transform.localScale = new Vector3(-10f, 9f, 1f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(Movespeed, GetComponent<Rigidbody2D>().velocity.y);
 
 
     }
     else
     {
-        transform.localScale = new Vector3(0.2f,0.2f,1f);
+        transform.localScale = new Vector3(10f, 9f, 1f);
         GetComponent<Rigidbody2D>().velocity = new Vector2(-Movespeed, GetComponent<Rigidbody2D>().velocity.y);
     }//ends else
 
