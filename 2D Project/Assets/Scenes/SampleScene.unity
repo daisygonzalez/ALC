@@ -1063,7 +1063,7 @@ MonoBehaviour:
   DeathParticle: {fileID: 1825223683}
   RespawnParticle: {fileID: 482733098}
   respawnDelay: 1
-  pointPenaltyOnDeath: 1
+  pointPenaltyOnDeath: 100
 --- !u!114 &372800036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,8 +1223,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467934082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.834, y: -0.56, z: 0}
-  m_LocalScale: {x: 128.54909, y: 5, z: 1}
+  m_LocalPosition: {x: 20.15, y: -0.56, z: 0}
+  m_LocalScale: {x: 112.06737, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1956,7 +1956,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2625,7 +2625,7 @@ GameObject:
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3162,8 +3162,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832841137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4, y: -0.8, z: 0}
-  m_LocalScale: {x: 128.54909, y: 5, z: 1}
+  m_LocalPosition: {x: 0.44, y: -0.8, z: 0}
+  m_LocalScale: {x: 116.56238, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -3555,6 +3555,7 @@ GameObject:
   - component: {fileID: 2046359447}
   - component: {fileID: 2046359446}
   - component: {fileID: 2046359445}
+  - component: {fileID: 2046359448}
   m_Layer: 0
   m_Name: DeathBox
   m_TagString: Untagged
@@ -3611,6 +3612,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2046359448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046359444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 0}
 --- !u!1 &2053788593
 GameObject:
   m_ObjectHideFlags: 0
