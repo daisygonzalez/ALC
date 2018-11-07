@@ -3,6 +3,7 @@ guid: 7c2b6a1910f894704ac9dabddcad1aae
 TextureImporter:
   fileIDToRecycleName:
     21300000: background
+    21300002: ladder
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -98,6 +99,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: fc5b10a7c7018470e826a8044349a714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ladder
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 321
+        width: 31
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b477a20ad4245e28854d0879ed2d52
       vertices: []
       indices: 
       edges: []

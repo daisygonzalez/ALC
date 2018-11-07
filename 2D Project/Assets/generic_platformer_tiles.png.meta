@@ -3,6 +3,9 @@ guid: b989d01230ccb40d4806ac613024f2ae
 TextureImporter:
   fileIDToRecycleName:
     21300000: Ladder
+    21300002: bridge
+    21300004: generic_platformer_tiles_0
+    21300006: green ground
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -64,7 +67,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -75,7 +78,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -86,18 +89,78 @@ TextureImporter:
       name: Ladder
       rect:
         serializedVersion: 2
-        x: 734
-        y: 317
-        width: 35
-        height: 71
+        x: 736
+        y: 318
+        width: 33
+        height: 70
       alignment: 6
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 8069edafa73e947b0bc4fd4222200b85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bridge
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 390
+        width: 271
+        height: 98
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 2, z: 24, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c0b1c409df1409087ae12498104e0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generic_platformer_tiles_0
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 409
+        width: 38
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc73a4d0595624a33b007af839750acd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green ground
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 712
+        width: 203
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 9, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2760ac677ff4e23b827e9538b35141
       vertices: []
       indices: 
       edges: []
