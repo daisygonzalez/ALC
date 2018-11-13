@@ -2085,7 +2085,6 @@ GameObject:
   - component: {fileID: 372800031}
   - component: {fileID: 372800030}
   - component: {fileID: 372800034}
-  - component: {fileID: 372800035}
   - component: {fileID: 372800036}
   m_Layer: 0
   m_Name: PC
@@ -2217,23 +2216,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &372800035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 372800029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048f0e44af7f64dedb841f097ad9245a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 197529571}
-  PC: {fileID: 372800031}
-  DeathParticle: {fileID: 1825223683}
-  RespawnParticle: {fileID: 482733098}
-  respawnDelay: 1
-  pointPenaltyOnDeath: 100
 --- !u!114 &372800036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4526,7 +4508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 372800035}
+  LevelManager: {fileID: 0}
 --- !u!114 &936449125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5014,7 +4996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 372800035}
+  LevelManager: {fileID: 0}
 --- !u!114 &1063828314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5263,6 +5245,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1141108662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1141108664}
+  - component: {fileID: 1141108663}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1141108663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141108662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048f0e44af7f64dedb841f097ad9245a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 197529571}
+  PC: {fileID: 372800031}
+  PC2: {fileID: 372800029}
+  DeathParticle: {fileID: 1825223683}
+  RespawnParticle: {fileID: 482733098}
+  respawnDelay: 1
+  pointPenaltyOnDeath: 100
+--- !u!4 &1141108664
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141108662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.47147, y: 52.145756, z: -2.0160685}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156983515
 GameObject:
@@ -7270,7 +7299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 50
-  Player: {fileID: 372800031}
+  PC: {fileID: 0}
+  TimeOut: 0
   EnemyDeath: {fileID: 1715192723830768, guid: 0358edc3d8b8f4755b1d8b5c06b2befa, type: 2}
   ProjectileParticle: {fileID: 1507103297815620, guid: 2b35f5b1500bf43a7ad0fa19ab20a8d4,
     type: 2}
@@ -7510,7 +7540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 372800035}
+  LevelManager: {fileID: 0}
 --- !u!114 &1774954224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,7 +7971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 372800035}
+  LevelManager: {fileID: 0}
 --- !u!1 &1810900362
 GameObject:
   m_ObjectHideFlags: 0
@@ -9462,7 +9492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 372800035}
+  LevelManager: {fileID: 0}
 --- !u!114 &2019242451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9691,7 +9721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4dd098eda034366a93158c2e9eba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 372800035}
+  LevelManager: {fileID: 0}
 --- !u!61 &2046359449
 BoxCollider2D:
   m_ObjectHideFlags: 0
