@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour {
+public class PlayerShoot: MonoBehaviour {
 public Transform FirePoint;
-    public GameObject Projectile;
-		
+public GameObject Projectile;
+void Start (){
+	// Load Projectile from Resources/Prefas Folder
+		Projectile = Resources.Load("Prefabs/Projecticle") as GameObject;
+	}	
 	
 	
 	// Update is called once per frame

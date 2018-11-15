@@ -13,12 +13,13 @@ public float TimeOut;
 	void Start () {
 	PC = GameObject.Find("PC");
     EnemyDeath = Resources.Load("Prefabs/DeathP") as GameObject;
-    ProjectileParticle = Resources.Load("Prefabs/Partcle System") as GameObject;
+    ProjectileParticle = Resources.Load("Prefabs/Particle System") as GameObject;
     	if(PC.transform.localScale.x < 0) 
             Speed = -Speed;
 	}
 	// Destory Projectile after X seconds
-    // Destroy(GameObject,TimeOut);
+     //Destroy(GameObject,TimeOut);
+
 	// Update is called once per frame
 	void Update () {
 		 GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
@@ -27,6 +28,7 @@ public float TimeOut;
 	}
    
     void OnTriggerEnter2D(Collider2D other){
+        //Destroys enemy on contact with projectile. Adds points.
         if(other.tag == "Enemy"){
             Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
                 Destroy (other.gameObject);

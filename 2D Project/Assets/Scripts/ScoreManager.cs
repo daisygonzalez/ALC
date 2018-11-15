@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
 
-    public static int score;
+    public static int Score;
 
 
     Text ScoreText;
@@ -16,30 +16,29 @@ public class ScoreManager : MonoBehaviour
     {
         ScoreText = GetComponent<Text>();
 
-        score = 0;
+        Score = 0;
     }
 
     //Update is called once per frame
 
     void Update()
     {
-        if (score < 0)
+        if (Score < 0)
         {
-            score = 0;
+            Score = 0;
+            ScoreText.text = " " + Score;
         }
-            ScoreText.text = " " + score;
-        
             
-
-    }
+        
+     }
 
     public static void AddPoints(int PointsToAdd)
     {
-        score += PointsToAdd;
+        Score += PointsToAdd;
     }
 
     //public static void Reset()
     //{
-    //    score = 0;
+    //    Score = 0;
     //}
 }
