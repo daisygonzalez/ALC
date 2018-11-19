@@ -7,7 +7,7 @@ public Transform FirePoint;
 public GameObject Projectile;
 void Start (){
 	// Load Projectile from Resources/Prefas Folder
-		Projectile = Resources.Load("Prefabs/Projecticle") as GameObject;
+		Projectile = Resources.Load("Prefabs/Projectile") as GameObject;
 	}	
 	
 	
