@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyParticle : MonoBehaviour {
+public class DestroyFinishedParticle : MonoBehaviour {
 
 private ParticleSystem thisParticleSystem;
 	// Use this for initialization
