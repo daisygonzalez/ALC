@@ -111,13 +111,13 @@ TextureImporter:
       name: bridge
       rect:
         serializedVersion: 2
-        x: 679
-        y: 390
-        width: 271
-        height: 98
+        x: 761
+        y: 385
+        width: 47
+        height: 14
       alignment: 6
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 2, z: 24, w: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

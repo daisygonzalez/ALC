@@ -12,8 +12,7 @@ public class ScoreManager : MonoBehaviour
 
     // Use this for initializaion
 
-    private void Start()
-    {
+    private void Start() {
         ScoreText = GetComponent<Text>();
 
         Score = 0;
@@ -21,19 +20,15 @@ public class ScoreManager : MonoBehaviour
 
     //Update is called once per frame
 
-    void Update()
-    {
+    void Update() {
         if (Score < 0)
-        {
+    
             Score = 0;
             ScoreText.text = " " + Score;
         }
             
-        
-     }
 
-    public static void AddPoints(int PointsToAdd)
-    {
+    public static void AddPoints(int PointsToAdd) {
         Score += PointsToAdd;
     }
 
