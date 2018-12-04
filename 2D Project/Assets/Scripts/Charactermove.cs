@@ -17,7 +17,7 @@ public class Charactermove : MonoBehaviour
     private bool grounded;
 
     //Non-Stick Player 
-    private float moveVelocity = 0f;
+    public float moveVelocity = 0f;
     //GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.x, jumpheight);
     //Use this for initialization
     void Start()
