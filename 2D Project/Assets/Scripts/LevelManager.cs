@@ -26,7 +26,7 @@ public GameObject CurrentCheckPoint;
     
     
 	void Start () {
-		PC = GameObject.Find("PC").GetComponent<Rigidbody2D>();
+		    PC = GameObject.Find("PC").GetComponent<Rigidbody2D>();
         PC2 = GameObject.Find("PC");
 	}
 	
