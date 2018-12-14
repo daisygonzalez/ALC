@@ -16,17 +16,17 @@ public class Charactermove : MonoBehaviour
     public LayerMask whatIsGround;
     private bool grounded;
 
-    //Non-Stick Player 
-    public float moveVelocity = 0f;
-    //GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.x, jumpheight);
+    //Non-Slide Player
+  private float moveVelocity = 0f;
+
     //Use this for initialization
     void Start()
     {
-
+        moveVelocity = 0f;
     }
 
 
-    void FixUpdate()
+    void FixedUpdate ()
     {
         grounded = Physics2D.OverlapCircle(groundcheck.position, groundCheckRadius, whatIsGround);
     }
@@ -36,40 +36,36 @@ public class Charactermove : MonoBehaviour
     {
 
         // This code makes the charcter jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown (KeyCode.Space)&& grounded)
         {
             Jump();
         }
         // Double jump code
-        if (grounded)
-            doubleJump = false;
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
+        if (grounded){
+            doubleJump = false;}
+        if (Input.GetKeyDown(KeyCode.Space)&& !doubleJump && !grounded)
         {
             Jump();
             doubleJump = true;
         }
+        //Non-Slide Player 
+        moveVelocity = 0f;
 
         //  This code makes the character move from side to side using the A&D keys
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey (KeyCode.D)){
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        moveVelocity = MoveSpeed;}
+        
+        if (Input.GetKey (KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        }
-        //Non-Stick Player 
-        moveVelocity = 0f;
-        //GetCompponent,Rigidbody2D>().velocity = new Vector2(-movespeed, GetComponent,Rigidbody2D>().velocity.y);
-        moveVelocity = -MoveSpeed;
-        if (Input.GetKey(KeyCode.A))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        }
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        moveVelocity = -MoveSpeed;}
          //Player flip
          if (GetComponent<Rigidbody2D>().velocity.x > 0)
-         transform.localScale = new Vector3(5f,5f,1f);
+            transform.localScale = new Vector3(5f,5f,1f);
 
-        
-        
-        else if (GetComponent<Rigidbody2D>().velocity.x < 0){
-        transform.localScale = new Vector3(-5f,5f,1f);
+         else if (GetComponent<Rigidbody2D>().velocity.x < 0){
+            transform.localScale = new Vector3(-5f,5f,1f);
         }
 
     }

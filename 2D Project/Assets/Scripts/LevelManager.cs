@@ -38,7 +38,7 @@ public GameObject CurrentCheckPoint;
         //Generate Death Particle
         Instantiate (DeathParticle, PC.transform.position, PC.transform.rotation);
             //Hide PC
-//            PC.enable= false;
+            // PC.enable= false;
         PC2.SetActive(false);
         PC.GetComponent<Renderer> ().enabled = false;
         // Gravity Reset 
