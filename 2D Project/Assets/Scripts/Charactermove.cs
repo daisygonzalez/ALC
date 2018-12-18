@@ -17,12 +17,11 @@ public class Charactermove : MonoBehaviour
     private bool grounded;
 
     //Non-Slide Player
-  private float moveVelocity = 0f;
-
+  public float moveVelocity = 0f;
     //Use this for initialization
     void Start()
     {
-        moveVelocity = 0f;
+        
     }
 
 
