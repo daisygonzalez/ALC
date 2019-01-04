@@ -17,7 +17,7 @@ public class Charactermove : MonoBehaviour
     private bool grounded;
 
     //Non-Slide Player
-  public float moveVelocity = 0f;
+  public float moveVelocity;
     //Use this for initialization
     void Start()
     {
@@ -57,8 +57,10 @@ public class Charactermove : MonoBehaviour
         
         if (Input.GetKey (KeyCode.A))
         {
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         moveVelocity = -MoveSpeed;}
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
          //Player flip
          if (GetComponent<Rigidbody2D>().velocity.x > 0)
             transform.localScale = new Vector3(5f,5f,1f);
