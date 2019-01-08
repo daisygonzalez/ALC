@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: background
     21300002: ladder
+    21300004: generic_platformer_tiles(1)_0
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -88,9 +89,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 253
-        width: 640
-        height: 485
+        y: 258
+        width: 638
+        height: 477
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,6 +120,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f3b477a20ad4245e28854d0879ed2d52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: generic_platformer_tiles(1)_0
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 535
+        width: 104
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95e098460f7f4943ac07ca75afac4e7
       vertices: []
       indices: 
       edges: []
